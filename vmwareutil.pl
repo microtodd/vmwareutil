@@ -107,7 +107,7 @@ if ($help) {
 exit;
 
 # Prints help message
-sub printHelp() {
+sub printHelp {
     print<<EOF;
 vmwareperfutil.pl
 
@@ -134,8 +134,7 @@ Optional:
 EOF
 }
 
-#
-sub printHeirarchy() {
+sub printHeirarchy { # ($outputFile)
     my($outputFile) = @_;
     
     # Prepare file if necessary
@@ -209,9 +208,8 @@ sub printHeirarchy() {
     close $fileH;
 }
 
-# printEntityList($entityType)
 # Prints a newline-separated list of all entities of <entityType>
-sub printEntityList() {
+sub printEntityList { # ($entityType)
     my($entityType) = @_;
 
     # Login
@@ -227,7 +225,7 @@ sub printEntityList() {
 }
 
 # Prints all counter types on this vServer
-sub printAllCounters() {
+sub printAllCounters {
 
     # Login
     Util::connect();
@@ -247,9 +245,8 @@ sub printAllCounters() {
     Util::disconnect();
 }
 
-# printStatsForEntity($entity,$entityType,$interval,$outputFilename)
 # Prints all known stats for $entity
-sub printStatsForEntity() {
+sub printStatsForEntity { # ($entity,$entityType,$interval,$outputFilename)
     my($entity,$type,$interval,$outputFile) = @_;
 
     unless ($outputFile) {
