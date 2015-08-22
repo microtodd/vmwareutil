@@ -1,5 +1,5 @@
 #!perl
-# Author: T.S. Davenport (tdavenport@yahoo.com)
+# Author: T.S. Davenport (todd.davenport@yahoo.com)
 #
 # Pulls performance metrics and/or metadata from vCenters
 #
